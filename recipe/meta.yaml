@@ -27,6 +27,8 @@ requirements:
     - pyyaml
     - qtpy
     - scikit-image
+    - pandas
+    - napari_video
 
 test:
   imports:
