@@ -7,23 +7,24 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+
   sha256: 95ff90749b871e4cc8147aeae5b4e3e4481403176ef95b2cb3cf949cdd6a3094
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=42.0.0
     - wheel
   run:
     - numpy
     - magicgui
-    - python >=3.8
+    - python >={{ python_min }}
     - pyyaml
     - qtpy
     - scikit-image
@@ -39,6 +40,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-simpleannotate
