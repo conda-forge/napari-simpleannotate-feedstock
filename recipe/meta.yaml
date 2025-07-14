@@ -22,6 +22,7 @@ requirements:
     - setuptools >=42.0.0
     - wheel
   run:
+    - napari
     - numpy
     - magicgui
     - python >={{ python_min }}
