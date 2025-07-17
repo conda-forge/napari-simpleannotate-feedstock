@@ -1,5 +1,5 @@
 {% set name = "napari-simpleannotate" %}
-{% set version = "0.0.9" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
 
-  sha256: 853d8abd7d7066476432f098be59bb3cc431edd6488dc74ad69898848e976afa
+  sha256: 57812e9117fc3c2543329af49dfd04a24abbc8c7ae0bf0bae215d1729ba66875
 
 build:
   noarch: python
