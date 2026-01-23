@@ -40,7 +40,7 @@ test:
     - napari_simpleannotate
   commands:
     - pip list
-    - pip check  || grep -v "opencv-contrib-python" || true
+    - pip check 2>&1 | grep -v "opencv-contrib-python" || true
   requires:
     - pip
     - pyqt
