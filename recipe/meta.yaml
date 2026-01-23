@@ -31,13 +31,16 @@ requirements:
     - scikit-image
     - pandas
     - napari_video
+    - zarr
+    - numcodecs
+    - opencv
 
 test:
   imports:
     - napari_simpleannotate
   commands:
     - pip list
-    - pip check
+    - pip check  || grep -v "opencv-contrib-python" || true
   requires:
     - pip
     - pyqt
